@@ -1,0 +1,81 @@
+[
+  {
+    "ContainingType": "SurvayBacket.Api.Controllers.PollsController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "api/Polls/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurvayBacket.Api.Controllers.PollsController",
+    "Method": "Update",
+    "RelativePath": "api/Polls/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "pollrequest",
+        "Type": "SurvayBacket.Api.Contracts.Request.PollRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurvayBacket.Api.Controllers.PollsController",
+    "Method": "Delete",
+    "RelativePath": "api/Polls/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurvayBacket.Api.Controllers.PollsController",
+    "Method": "Create",
+    "RelativePath": "api/Polls/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pollrequest",
+        "Type": "SurvayBacket.Api.Contracts.Request.PollRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurvayBacket.Api.Controllers.PollsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Polls/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

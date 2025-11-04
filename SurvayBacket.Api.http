@@ -1,0 +1,10 @@
+@SurvayBacket.Api_HostAddress = https://localhost:7297
+
+GET {{SurvayBacket.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{SurvayBacket.Api_HostAddress}}/api/polls
+
+###
