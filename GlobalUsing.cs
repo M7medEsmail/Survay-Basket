@@ -2,9 +2,8 @@
 global using Microsoft.AspNetCore.Mvc;
 global using SurvayBacket.Api.Entities;
 global using Mapster;
-global using SurvayBacket.Api.Contracts.Request;
-global using SurvayBacket.Api.Contracts.Response;
 global using SurvayBacket.Api.Mapping;
 global using SurvayBacket.Api.Services;
 global using Microsoft.EntityFrameworkCore;
 global using SurvayBacket.Api.Persistence;
+global using FluentValidation;

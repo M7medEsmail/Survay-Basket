@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
+using SurvayBacket.Api.Contracts.Polls;
+using System.Threading.Tasks;
 
 namespace SurvayBacket.Api.Controllers
 {
@@ -7,7 +9,7 @@ namespace SurvayBacket.Api.Controllers
     public class PollsController(IPollService pollService) : ControllerBase
     {
         private readonly IPollService _pollService = pollService; //Using Primary Constractor
-
+        [Authorize]
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
         {

@@ -22,30 +22,36 @@
 
     #region Adding Services
     builder.Services.AddDependancies();
-    // Add services to the container.
 
-    // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-    //builder.Services.AddEndpointsApiExplorer();
-    //builder.Services.AddSwaggerGen();
+    builder.Services.AddAuthConfig(builder.Configuration);
 
-    //builder.Services.AddTransient<IOperationTransient, MacOsSevice>();
-    //builder.Services.AddScoped<IOperationScoped,MacOsSevice>();
-    //builder.Services.AddSingleton<IOperationSingleton,MacOsSevice>();
-    //builder.Services.AddScoped<IPollService, PollService>();
-    #endregion
+// Add services to the container.
 
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+//builder.Services.AddEndpointsApiExplorer();
+//builder.Services.AddSwaggerGen();
 
-    #region Using Mapster
-
-    //var MappingConfig = TypeAdapterConfig.GlobalSettings;
-    //MappingConfig.Scan(Assembly.GetExecutingAssembly());
-
-    //builder.Services.AddSingleton<IMapper>(new Mapper(MappingConfig));
-    //builder.Services.AddMapster();
-    #endregion
+//builder.Services.AddTransient<IOperationTransient, MacOsSevice>();
+//builder.Services.AddScoped<IOperationScoped,MacOsSevice>();
+//builder.Services.AddSingleton<IOperationSingleton,MacOsSevice>();
+//builder.Services.AddScoped<IPollService, PollService>();
+#endregion
 
 
-    var app = builder.Build();
+#region Using Mapster
+
+//var MappingConfig = TypeAdapterConfig.GlobalSettings;
+//MappingConfig.Scan(Assembly.GetExecutingAssembly());
+
+//builder.Services.AddSingleton<IMapper>(new Mapper(MappingConfig));
+//builder.Services.AddMapster();
+#endregion
+
+//builder.Services.AddIdentityApiEndpoints<ApplicationUser>
+//    .addentityframeworkStores<ApplicationDbContext>();
+
+
+var app = builder.Build();
 
     // Configure the HTTP request pipeline.
     // some of medelware
@@ -63,8 +69,6 @@
 
     app.UseAuthorization();
 
-    app.MapIdentityApi<ApplicationUser>();
-
     app.MapControllers();
-
+    
     app.Run();

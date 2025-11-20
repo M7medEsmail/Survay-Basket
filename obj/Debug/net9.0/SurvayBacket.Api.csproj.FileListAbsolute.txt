@@ -170,3 +170,9 @@ C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\obj\Debug\net9.0\S
 C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\obj\Debug\net9.0\SurvayBacket.Api.genruntimeconfig.cache
 C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\obj\Debug\net9.0\ref\SurvayBacket.Api.dll
 C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\obj\Debug\net9.0\SurvayBacket.Api.sourcelink.json
+C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\MediatR.dll
+C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\MediatR.Contracts.dll
+C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

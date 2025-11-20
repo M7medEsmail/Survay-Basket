@@ -1,5 +1,4 @@
-﻿using SurvayBacket.Api.Contracts.Request;
-using SurvayBacket.Api.Contracts.Response;
+﻿using SurvayBacket.Api.Contracts.Polls;
 
 namespace SurvayBacket.Api.Mapping
 {

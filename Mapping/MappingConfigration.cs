@@ -1,4 +1,6 @@
-﻿namespace SurvayBacket.Api.Mapping
+﻿using SurvayBacket.Api.Contracts.Polls;
+
+namespace SurvayBacket.Api.Mapping
 {
     public class MappingConfigration : IRegister
     {

@@ -1,4 +1,4 @@
-﻿namespace SurvayBacket.Api.Contracts.Response
+﻿namespace SurvayBacket.Api.Contracts.Polls
 {
     public record PollResponse(
          int Id,
