@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\SurvayBacket.Api",
+    "\\SurvayBacket.Api\\Contracts",
+    "\\SurvayBacket.Api\\Contracts\\Requests",
+    "\\SurvayBacket.Api\\Contracts\\Responses",
+    "\\SurvayBacket.Api\\Mapping",
+    "\\SurvayBacket.Api\\Models",
+    "\\SurvayBacket.Api\\Services",
+    "\\SurvayBacket.Api\\ValidationAttributes",
+    "\\SurvayBacket.Api\\ValidationAttributes\\CutomeAttribute"
+  ],
+  "SelectedNode": "\\SurvayBacket.Api\\SurvayBacket.Api.csproj",
+  "PreviewInSolutionExplorer": false
+}
