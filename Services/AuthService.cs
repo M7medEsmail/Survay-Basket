@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using SurvayBacket.Api.Authentication;
 using SurvayBacket.Api.Contracts.Authentication;
+using System.Security.Cryptography;
 
 namespace SurvayBacket.Api.Services
 {
@@ -8,7 +9,7 @@ namespace SurvayBacket.Api.Services
     {
         private readonly UserManager<ApplicationUser> _userManager = userManager;
         private readonly IJwtProvider _jwtProvider = jwtProvider;
-
+        public static readonly int RefreshTokenExpireDay = 60;
         public async Task<AuthResponse?> GenerateJwtToken(string email, string password, CancellationToken cancellationToken)
         {
 
@@ -22,8 +23,23 @@ namespace SurvayBacket.Api.Services
 
             var (token, expiration) = _jwtProvider.GenerateJwtToken(user);
 
-            return new AuthResponse(user.Id,user.FirstName ,user.LastName,user.Email!,token , expiration);
+            var refreshToken = GenerateRefreshToken();
+            var refreshTokenExpiryTime = DateTime.UtcNow.AddDays(RefreshTokenExpireDay);
 
+            user.RefreshTokens.Add(new RefreshToken{
+                Token = refreshToken,
+                ExpireOn = refreshTokenExpiryTime,
+
+            });
+
+            await _userManager.UpdateAsync(user);
+            return new AuthResponse(user.Id,user.FirstName ,user.LastName,user.Email!,token , expiration , refreshToken , refreshTokenExpiryTime);
+
+        }
+
+        private static string GenerateRefreshToken()
+        {
+            return Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
         }
 
         public async Task<bool> RegisterAsync(RegisterRequest registerRequest, CancellationToken cancellationToken)
