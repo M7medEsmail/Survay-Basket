@@ -15,10 +15,10 @@ namespace SurvayBacket.Api.Contracts.Polls
                 .Length(5 , 1500)
                 .WithMessage("{PropertyName} must be max: {MaxLength}, you entered {TotalLength}");
 
-            RuleFor(x => x.StartAt)
-                .NotEmpty()
-                .GreaterThanOrEqualTo(DateOnly.FromDateTime(DateTime.Today))
-                .WithMessage("{PropertyName} must be more than today");
+            //RuleFor(x => x.StartAt)
+            //    .NotEmpty()
+            //    .GreaterThanOrEqualTo(DateOnly.FromDateTime(DateTime.Today))
+            //    .WithMessage("{PropertyName} must be more than today");
             RuleFor(x => x.EndAt)
                 .NotEmpty();
             RuleFor(x => x)

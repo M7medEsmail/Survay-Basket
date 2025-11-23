@@ -4,8 +4,8 @@
          string Title,
          string Summary,
          bool IsPublished,
-         DateOnly StartAt,
-         DateOnly EndAt
+         DateTime StartAt,
+         DateTime EndAt
         );
 
 }

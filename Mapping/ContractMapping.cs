@@ -28,6 +28,9 @@ namespace SurvayBacket.Api.Mapping
             {
                 Title = request.Title,
                 Summary = request.Summary,
+                IsPublished = request.IsPublished,
+                //StartAt = request.StartAt.ToDateTime(TimeOnly.MinValue),
+                //EndAt = request.EndAt.ToDateTime(TimeOnly.MinValue)
             };
         }
         #endregion

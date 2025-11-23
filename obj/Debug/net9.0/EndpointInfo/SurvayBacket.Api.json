@@ -227,11 +227,11 @@
           },
           "startAt": {
             "type": "string",
-            "format": "date"
+            "format": "date-time"
           },
           "endAt": {
             "type": "string",
-            "format": "date"
+            "format": "date-time"
           }
         },
         "additionalProperties": false

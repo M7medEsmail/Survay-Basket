@@ -36,7 +36,37 @@ namespace SurvayBacket.Api.Services
             return new AuthResponse(user.Id,user.FirstName ,user.LastName,user.Email!,token , expiration , refreshToken , refreshTokenExpiryTime);
 
         }
+        public async Task<AuthResponse?> GetRefreshToken(string token, string refreshToken, CancellationToken cancellationToken)
+        {
+            string? userId = _jwtProvider.ValidateToken(token);
+            if (userId is null)
+                return null;
 
+            var user =await _userManager.FindByIdAsync(userId);
+            if (user is null)
+                return null;
+
+            var UserRefreshToken = user.RefreshTokens.FirstOrDefault(rt => rt.Token == refreshToken && rt.IsActive);
+            if (UserRefreshToken is null)
+                return null;
+
+            UserRefreshToken.RevokedOn = DateTime.UtcNow;
+
+            var (newtoken, expiration) = _jwtProvider.GenerateJwtToken(user);
+            var NewrefreshToken = GenerateRefreshToken();
+            var refreshTokenExpiryTime = DateTime.UtcNow.AddDays(RefreshTokenExpireDay);
+
+            user.RefreshTokens.Add(new RefreshToken
+            {
+                Token = NewrefreshToken,
+                ExpireOn = refreshTokenExpiryTime,
+
+            });
+
+            await _userManager.UpdateAsync(user);
+            return new AuthResponse(user.Id, user.FirstName, user.LastName, user.Email!, newtoken, expiration, NewrefreshToken, refreshTokenExpiryTime);
+
+        }
         private static string GenerateRefreshToken()
         {
             return Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
@@ -54,5 +84,8 @@ namespace SurvayBacket.Api.Services
             await _userManager.CreateAsync(user, registerRequest.Password);
             return true;
         }
+
+
     }
 }
+ 

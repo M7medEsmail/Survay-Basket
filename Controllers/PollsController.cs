@@ -6,10 +6,11 @@ namespace SurvayBacket.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController] // same behavior of [from body]  & Prevent requset to compelete if attribute is requird
+    [Authorize]
     public class PollsController(IPollService pollService) : ControllerBase
     {
         private readonly IPollService _pollService = pollService; //Using Primary Constractor
-        [Authorize]
+      
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
         {
@@ -28,9 +29,20 @@ namespace SurvayBacket.Api.Controllers
         [HttpPost("create")]
         public async Task <IActionResult> Create([FromBody] PollRequest pollrequest ,CancellationToken cancellationToken)
         {
+            //var poll = new Poll
+            //{
+            //    Title = pollrequest.Title,
+            //    Summary = pollrequest.Summary,
+            //    StartAt = pollrequest.StartAt,
+            //    EndAt = pollrequest.EndAt,
+            //    IsPublished = pollrequest.IsPublished
+            //};
+
+            //var NewPoll =await _pollService.CreateAsync(poll, cancellationToken);
             var NewPoll =await _pollService.CreateAsync(pollrequest.Adapt<Poll>(), cancellationToken);
-            //return CreatedAtAction(nameof(GetByIdAsync), new { id = NewPoll.Id }, NewPoll);
-            return Ok(NewPoll);
+            //return CreatedAtAction(nameof(GetByIdAsync), new { id = NewPoll.Id }, NewPoll.Adapt<PollResponse>());
+            return Ok(NewPoll.Adapt<PollResponse>());
+        
         }
 
         [HttpPut("{id}")]
@@ -39,7 +51,8 @@ namespace SurvayBacket.Api.Controllers
             var isUpdated =await _pollService.UpdateAsync(id, pollrequest.Adapt<Poll>() , cancellationToken);
             if (!isUpdated)
                 return NotFound();
-            return NoContent();
+            return CreatedAtAction(nameof(GetByIdAsync), id);
+            //return NoContent();
         }
 
         [HttpDelete("{id}")]
