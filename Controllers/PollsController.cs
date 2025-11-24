@@ -23,7 +23,7 @@ namespace SurvayBacket.Api.Controllers
         public async Task <IActionResult> GetByIdAsync([FromRoute] int id, CancellationToken cancellationToken)
         {
             var poll =await _pollService.GetByIdAsync(id, cancellationToken);
-            return poll is null ? NotFound() : Ok(poll.Adapt<PollResponse>());
+            return poll.IsFailure? NotFound(poll.Error) : Ok(poll.Adapt<PollResponse>());
         }
 
         [HttpPost("create")]
@@ -39,7 +39,7 @@ namespace SurvayBacket.Api.Controllers
             //};
 
             //var NewPoll =await _pollService.CreateAsync(poll, cancellationToken);
-            var NewPoll =await _pollService.CreateAsync(pollrequest.Adapt<Poll>(), cancellationToken);
+            var NewPoll =await _pollService.CreateAsync(pollrequest, cancellationToken);
             //return CreatedAtAction(nameof(GetByIdAsync), new { id = NewPoll.Id }, NewPoll.Adapt<PollResponse>());
             return Ok(NewPoll.Adapt<PollResponse>());
         
@@ -48,19 +48,19 @@ namespace SurvayBacket.Api.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] PollRequest pollrequest ,CancellationToken cancellationToken)
         {
-            var isUpdated =await _pollService.UpdateAsync(id, pollrequest.Adapt<Poll>() , cancellationToken);
-            if (!isUpdated)
-                return NotFound();
-            return CreatedAtAction(nameof(GetByIdAsync), id);
-            //return NoContent();
+            var result =await _pollService.UpdateAsync(id, pollrequest , cancellationToken);
+            if (result.IsFailure)
+                return NotFound(result.Error);
+
+            return NoContent();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete([FromRoute] int id, CancellationToken cancellationToken)
         {
-            var IsDeleted =await _pollService.DeleteAsync(id ,cancellationToken);
-            if (!IsDeleted)
-                return NotFound();
+            var result =await _pollService.DeleteAsync(id ,cancellationToken);
+            if (result.IsFailure)
+                return NotFound(result.Error);
             return NoContent();
         }
          

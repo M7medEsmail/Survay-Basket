@@ -18,7 +18,16 @@ namespace SurvayBacket.Api
             services.AddControllers();
 
             services.AddEndpointsApiExplorer();
-
+            services.AddCors(options =>
+            {
+                options.AddPolicy("MyPolicy",builder =>
+                {
+                    builder.AllowAnyOrigin()
+                           .AllowAnyHeader()
+                           .AllowAnyMethod();
+                    //.WithOrigins("specific domain"); // to allow specific domain
+                });
+            });
             services.AddScoped<IPollService, PollService>();
 
             var MappingConfig = TypeAdapterConfig.GlobalSettings;

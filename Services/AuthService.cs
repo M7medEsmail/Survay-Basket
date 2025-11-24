@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using SurvayBacket.Api.Abstractions;
 using SurvayBacket.Api.Authentication;
 using SurvayBacket.Api.Contracts.Authentication;
+using SurvayBacket.Api.Errors;
 using System.Security.Cryptography;
 
 namespace SurvayBacket.Api.Services
@@ -10,16 +12,16 @@ namespace SurvayBacket.Api.Services
         private readonly UserManager<ApplicationUser> _userManager = userManager;
         private readonly IJwtProvider _jwtProvider = jwtProvider;
         public static readonly int RefreshTokenExpireDay = 60;
-        public async Task<AuthResponse?> GenerateJwtToken(string email, string password, CancellationToken cancellationToken)
+        public async Task<Result<AuthResponse>> GenerateJwtToken(string email, string password, CancellationToken cancellationToken)
         {
 
             var user =await _userManager.FindByEmailAsync(email);
             if (user is null)
-                return null;
+                return Result.Failure<AuthResponse>(UserError.InvalidCredentials);
 
             var isPasswordValid = await _userManager.CheckPasswordAsync(user, password);
             if (!isPasswordValid)
-                return null;
+                return Result.Failure<AuthResponse>(UserError.InvalidCredentials);
 
             var (token, expiration) = _jwtProvider.GenerateJwtToken(user);
 
@@ -33,7 +35,8 @@ namespace SurvayBacket.Api.Services
             });
 
             await _userManager.UpdateAsync(user);
-            return new AuthResponse(user.Id,user.FirstName ,user.LastName,user.Email!,token , expiration , refreshToken , refreshTokenExpiryTime);
+            var resonse = new AuthResponse(user.Id, user.FirstName, user.LastName, user.Email!, token, expiration, refreshToken, refreshTokenExpiryTime);
+            return Result.Success(resonse);
 
         }
         public async Task<AuthResponse?> GetRefreshToken(string token, string refreshToken, CancellationToken cancellationToken)

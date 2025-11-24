@@ -67,6 +67,8 @@ var app = builder.Build();
 
     app.UseHttpsRedirection();
 
+    app.UseCors("MyPolicy");
+
     app.UseAuthorization();
 
     app.MapControllers();

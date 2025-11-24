@@ -19,9 +19,7 @@ namespace SurvayBacket.Api.Controllers
         {
           var AuthRequest =  await _authService.GenerateJwtToken(loginRequest.Email, loginRequest.Password, cancellationToken);
 
-            if (AuthRequest is null)
-                return Unauthorized();
-            return Ok(AuthRequest);
+            return AuthRequest.IsSuccess? Ok(AuthRequest) :BadRequest(AuthRequest.Error);
 
         }
 
