@@ -39,19 +39,19 @@ namespace SurvayBacket.Api.Services
             return Result.Success(resonse);
 
         }
-        public async Task<AuthResponse?> GetRefreshToken(string token, string refreshToken, CancellationToken cancellationToken)
+        public async Task<Result<AuthResponse>> GetRefreshToken(string token, string refreshToken, CancellationToken cancellationToken)
         {
             string? userId = _jwtProvider.ValidateToken(token);
             if (userId is null)
-                return null;
+                return Result.Failure<AuthResponse>(UserError.UserIsNull);
 
             var user =await _userManager.FindByIdAsync(userId);
             if (user is null)
-                return null;
+                return Result.Failure<AuthResponse>(UserError.UserIsNull);
 
-            var UserRefreshToken = user.RefreshTokens.FirstOrDefault(rt => rt.Token == refreshToken && rt.IsActive);
+            RefreshToken? UserRefreshToken = user.RefreshTokens.FirstOrDefault(rt => rt.Token == refreshToken && rt.IsActive);
             if (UserRefreshToken is null)
-                return null;
+                return Result.Failure<AuthResponse>(UserError.UserIsNull);
 
             UserRefreshToken.RevokedOn = DateTime.UtcNow;
 
@@ -63,19 +63,18 @@ namespace SurvayBacket.Api.Services
             {
                 Token = NewrefreshToken,
                 ExpireOn = refreshTokenExpiryTime,
-
             });
 
             await _userManager.UpdateAsync(user);
-            return new AuthResponse(user.Id, user.FirstName, user.LastName, user.Email!, newtoken, expiration, NewrefreshToken, refreshTokenExpiryTime);
+            var result= new AuthResponse(user.Id, user.FirstName, user.LastName, user.Email!, newtoken, expiration, NewrefreshToken, refreshTokenExpiryTime);
 
+            return Result.Success(result);
         }
         private static string GenerateRefreshToken()
         {
             return Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
         }
-
-        public async Task<bool> RegisterAsync(RegisterRequest registerRequest, CancellationToken cancellationToken)
+        public async Task<Result> RegisterAsync(RegisterRequest registerRequest, CancellationToken cancellationToken)
         {
             var user = new ApplicationUser
             {
@@ -85,10 +84,8 @@ namespace SurvayBacket.Api.Services
                 LastName = registerRequest.LastName
             };
             await _userManager.CreateAsync(user, registerRequest.Password);
-            return true;
+            return Result.Success();
         }
-
-
     }
 }
  

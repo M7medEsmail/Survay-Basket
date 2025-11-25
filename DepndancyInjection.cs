@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using SurvayBacket.Api.Authentication;
+using SurvayBacket.Api.Errors;
 using SurvayBacket.Api.Persistence;
 using System.Reflection;
 
@@ -39,6 +40,10 @@ namespace SurvayBacket.Api
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
             services.AddAuthentication();
             services.AddAuthorization();
+            services.AddExceptionHandler < GlobalExceptionHandler>();
+            services.AddProblemDetails();
+
+
             return services; 
         }
         public static IServiceCollection AddAuthConfig(this IServiceCollection services ,IConfiguration configuration )

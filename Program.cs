@@ -72,5 +72,7 @@ var app = builder.Build();
     app.UseAuthorization();
 
     app.MapControllers();
-    
-    app.Run();
+    app.UseExceptionHandler();
+//app.UseMiddleware<ExceptionHandelMiddleware>();
+
+app.Run();

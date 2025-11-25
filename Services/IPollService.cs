@@ -9,7 +9,7 @@ namespace SurvayBacket.Api.Services
     {
         Task<IEnumerable<PollResponse>> GetAllAsync(CancellationToken cancellationToken);
         Task<Result<PollResponse>> GetByIdAsync(int id, CancellationToken cancellationToken);
-        Task<PollResponse> CreateAsync(PollRequest poll , CancellationToken cancellationToken);
+        Task<Result<PollResponse>> CreateAsync(PollRequest poll , CancellationToken cancellationToken);
         Task<Result> UpdateAsync(int id ,PollRequest poll , CancellationToken cancellationToken);
         Task<Result> DeleteAsync(int id , CancellationToken cancellationToken);
 

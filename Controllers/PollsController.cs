@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using SurvayBacket.Api.Abstractions;
 using SurvayBacket.Api.Contracts.Polls;
+using SurvayBacket.Api.Entities;
 using System.Threading.Tasks;
 
 namespace SurvayBacket.Api.Controllers
@@ -23,7 +25,7 @@ namespace SurvayBacket.Api.Controllers
         public async Task <IActionResult> GetByIdAsync([FromRoute] int id, CancellationToken cancellationToken)
         {
             var poll =await _pollService.GetByIdAsync(id, cancellationToken);
-            return poll.IsFailure? NotFound(poll.Error) : Ok(poll.Adapt<PollResponse>());
+            return poll.IsFailure? NotFound(poll.Error) : Ok(poll.Value);
         }
 
         [HttpPost("create")]
@@ -40,9 +42,9 @@ namespace SurvayBacket.Api.Controllers
 
             //var NewPoll =await _pollService.CreateAsync(poll, cancellationToken);
             var NewPoll =await _pollService.CreateAsync(pollrequest, cancellationToken);
-            //return CreatedAtAction(nameof(GetByIdAsync), new { id = NewPoll.Id }, NewPoll.Adapt<PollResponse>());
-            return Ok(NewPoll.Adapt<PollResponse>());
-        
+            return NewPoll.IsSuccess? Ok(NewPoll.Value)
+                : NewPoll.ToProblem(StatusCodes.Status409Conflict);  
+
         }
 
         [HttpPut("{id}")]

@@ -9,11 +9,16 @@ namespace SurvayBacket.Api.Services
     {
         private readonly ApplicationDbContext _context = context;
 
-        public async Task<PollResponse> CreateAsync(PollRequest poll, CancellationToken cancellationToken)
+        public async Task<Result<PollResponse>> CreateAsync(PollRequest poll, CancellationToken cancellationToken)
         {
+            var isExist = await _context.Polls.AnyAsync(p => p.Title == poll.Title, cancellationToken);
+            if (isExist)
+                return Result.Failure<PollResponse>(PollError.PollAlreadyExists);
+
+
             await _context.Polls.AddAsync(poll.Adapt<Poll>() , cancellationToken);
             await _context.SaveChangesAsync(cancellationToken);
-            return poll.Adapt<PollResponse>();
+            return Result.Success(poll.Adapt<PollResponse>());
         }
 
         public async Task<Result> DeleteAsync(int id, CancellationToken cancellationToken)
