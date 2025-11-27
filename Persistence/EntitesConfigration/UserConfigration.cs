@@ -1,5 +1,4 @@
-﻿
-namespace SurvayBacket.Api.Entities.EntitesConfigration
+﻿namespace SurvayBacket.Api.Persistence.EntitesConfigration
 {
     public class UserConfigration :IEntityTypeConfiguration<ApplicationUser>
     {

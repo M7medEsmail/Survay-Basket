@@ -47,6 +47,11 @@ namespace SurvayBacket.Api.Services
 
         public async Task<Result> UpdateAsync(int id, PollRequest poll, CancellationToken cancellationToken)
         {
+            var isExist = await _context.Polls.AnyAsync(p => p.Title == poll.Title && p.Id !=id, cancellationToken);
+            if (isExist)
+                return Result.Failure<PollResponse>(PollError.PollAlreadyExists);
+
+
             var currentPool =await  _context.Polls.FindAsync(id);
             if (currentPool == null)
             {

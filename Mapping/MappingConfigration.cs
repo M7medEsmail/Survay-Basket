@@ -1,4 +1,5 @@
 ﻿using SurvayBacket.Api.Contracts.Polls;
+using SurvayBacket.Api.Contracts.Question;
 
 namespace SurvayBacket.Api.Mapping
 {
@@ -6,10 +7,14 @@ namespace SurvayBacket.Api.Mapping
     {
         public void Register(TypeAdapterConfig config)
         {
+            config.NewConfig<QuestionRequest, Question>()
+                .Map(dest => dest.Answers, src => src.Answers.Select(answer => new Answer{ Content = answer }));
+                    //.Ignore(QuestionRequest => QuestionRequest.Answers);
+
             config.NewConfig<Poll, PollResponse>()
                 .Map(dest => dest.Summary, src => src.Summary);
 
-            config.NewConfig<PollRequest, Poll>()
+            config.NewConfig<PollRequest, Poll>()   
                 .Map(dest => dest.StartAt, src => src.StartAt)
                 .Map(dest => dest.EndAt, src => src.EndAt)
                 .Map(dest => dest.Summary, src => src.Summary)

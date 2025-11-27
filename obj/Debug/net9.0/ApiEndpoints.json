@@ -85,6 +85,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SurvayBacket.Api.Controllers.QuestionController",
+    "Method": "GetAll",
+    "RelativePath": "api/polls/{pollId}/Question",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pollId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurvayBacket.Api.Controllers.QuestionController",
+    "Method": "Add",
+    "RelativePath": "api/polls/{pollId}/Question",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pollId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "questionRequest",
+        "Type": "SurvayBacket.Api.Contracts.Question.QuestionRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurvayBacket.Api.Controllers.QuestionController",
+    "Method": "Get",
+    "RelativePath": "api/polls/{pollId}/Question/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pollId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurvayBacket.Api.Controllers.QuestionController",
+    "Method": "ToggleStatus",
+    "RelativePath": "api/polls/{pollId}/Question/{id}/toggleStatus",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pollId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SurvayBacket.Api.Controllers.PollsController",
     "Method": "Create",
     "RelativePath": "api/Polls/create",

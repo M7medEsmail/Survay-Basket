@@ -51,6 +51,7 @@ namespace SurvayBacket.Api
             var jwtOptions = configuration.GetSection("Jwt").Get<JwtOption>();
             services.AddSingleton<IJwtProvider, JwtProvider>();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IQuestionService, QuestionService>();
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 

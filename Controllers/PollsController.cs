@@ -51,8 +51,9 @@ namespace SurvayBacket.Api.Controllers
         public async Task<IActionResult> Update(int id, [FromBody] PollRequest pollrequest ,CancellationToken cancellationToken)
         {
             var result =await _pollService.UpdateAsync(id, pollrequest , cancellationToken);
+           
             if (result.IsFailure)
-                return NotFound(result.Error);
+                return result.ToProblem(StatusCodes.Status409Conflict);
 
             return NoContent();
         }

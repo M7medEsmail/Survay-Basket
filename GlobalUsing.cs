@@ -8,3 +8,4 @@ global using Microsoft.EntityFrameworkCore;
 global using SurvayBacket.Api.Persistence;
 global using FluentValidation;
 global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using SurvayBacket.Api.Persistence.EntitesConfigration;

@@ -10,5 +10,6 @@ namespace SurvayBacket.Api.Entities
         public bool IsPublished { get; set; }
         public DateTime StartAt { get; set; }
         public DateTime EndAt { get; set; }
+        public ICollection<Question> Questions { get; set; } = [];
     }
 }

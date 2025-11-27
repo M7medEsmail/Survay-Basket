@@ -1,7 +1,7 @@
 ﻿
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace SurvayBacket.Api.Entities.EntitesConfigration
+namespace SurvayBacket.Api.Persistence.EntitesConfigration
 {
     public class PollConfigration : IEntityTypeConfiguration<Poll>
     {

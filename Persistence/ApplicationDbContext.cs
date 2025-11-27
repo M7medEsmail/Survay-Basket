@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using SurvayBacket.Api.Entities.EntitesConfigration;
 using System.Net.WebSockets;
 using System.Reflection;
 
@@ -13,10 +12,21 @@ namespace SurvayBacket.Api.Persistence
         private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
 
         public DbSet<Poll> Polls { get; set; }
+        public DbSet<Answer> Answers { get; set; }
+        public DbSet<Question> Questions { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.ApplyConfiguration(new PollConfigration());
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly()); // get all configration for classes that implement IEntityTypeConfiguration
+
+            //Change behavior of delete to restrict instead of cascade delete
+
+            var ForeignKeys = modelBuilder.Model.GetEntityTypes()
+                .SelectMany(e => e.GetForeignKeys()).Where(fq=>fq.DeleteBehavior == DeleteBehavior.Cascade && !fq.IsOwnership);
+
+            foreach (var foreignKey in ForeignKeys)
+                foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
+
             base.OnModelCreating(modelBuilder);
         }
 
