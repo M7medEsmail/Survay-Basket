@@ -4,7 +4,7 @@ namespace SurvayBacket.Api.Errors
 {
     public static class QuestionError
     {
-        public static readonly Error QuestionNotFound = new Error("Question.NotFound", "No Question was found with this given id.");
-        public static readonly Error QuestionAlreadyExists = new Error("Question.QuestionAlreadyExists", "This has same Question with same Content is exist.");
+        public static readonly Error QuestionNotFound = new Error("Question.NotFound", "No Question was found with this given id.", StatusCodes.Status404NotFound);
+        public static readonly Error QuestionAlreadyExists = new Error("Question.QuestionAlreadyExists", "This has same Question with same Content is exist.", StatusCodes.Status409Conflict);
     }
 }

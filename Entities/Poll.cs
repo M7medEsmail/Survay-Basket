@@ -11,5 +11,6 @@ namespace SurvayBacket.Api.Entities
         public DateTime StartAt { get; set; }
         public DateTime EndAt { get; set; }
         public ICollection<Question> Questions { get; set; } = [];
+        public ICollection<Vote> Votes { get; set; } = [];
     }
 }

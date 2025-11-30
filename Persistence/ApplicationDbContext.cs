@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using SurvayBacket.Api.Extensions;
 using System.Net.WebSockets;
 using System.Reflection;
 
@@ -14,6 +15,8 @@ namespace SurvayBacket.Api.Persistence
         public DbSet<Poll> Polls { get; set; }
         public DbSet<Answer> Answers { get; set; }
         public DbSet<Question> Questions { get; set; }
+        public DbSet<Vote> Votes { get; set; }
+        public DbSet<VoteAnswer> VoteAnswers { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.ApplyConfiguration(new PollConfigration());
@@ -34,7 +37,7 @@ namespace SurvayBacket.Api.Persistence
         {
             var Entries = ChangeTracker.Entries<AuditableEntity>();
 
-            var CurrentUserId = _httpContextAccessor.HttpContext?.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            var CurrentUserId = _httpContextAccessor.HttpContext?.User.GetUserId();
 
             foreach (var entire in Entries)
             {

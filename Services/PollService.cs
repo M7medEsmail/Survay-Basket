@@ -31,11 +31,16 @@ namespace SurvayBacket.Api.Services
             return Result.Success();
         }
 
-        public async Task<IEnumerable<PollResponse>> GetAllAsync(CancellationToken cancellationToken)
-        {
-            var allPolls = await _context.Polls.AsNoTracking().ToListAsync();
-            return allPolls.Adapt<IEnumerable<PollResponse>>();
-        }
+        public async Task<IEnumerable<PollResponse>> GetAllAsync(CancellationToken cancellationToken) =>
+        
+            await _context.Polls.AsNoTracking().ProjectToType<PollResponse>().ToListAsync();
+        
+
+        public async Task<IEnumerable<PollResponse>> GetCurrentAsync(CancellationToken cancellationToken) =>
+           await _context.Polls
+            .Where(x=>x.IsPublished && x.StartAt <= DateTime.UtcNow && x.EndAt >= DateTime.UtcNow)
+            .AsNoTracking().ProjectToType<PollResponse>().ToListAsync();
+
 
         public async Task<Result<PollResponse>> GetByIdAsync(int id, CancellationToken cancellationToken)
         {

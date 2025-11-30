@@ -17,9 +17,15 @@ namespace SurvayBacket.Api.Controllers
         public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
         {
             var polls = await _pollService.GetAllAsync(cancellationToken);
-            var reponse = polls.Adapt<IEnumerable<PollResponse>>();
-            return Ok(reponse);
-        }   
+            return Ok(polls);
+        }
+
+        [HttpGet("Current")]
+        public async Task<IActionResult> GetCurrent(CancellationToken cancellationToken)
+        {
+            var polls = await _pollService.GetCurrentAsync(cancellationToken);
+            return Ok(polls);
+        }
 
         [HttpGet("{id:int}")]
         public async Task <IActionResult> GetByIdAsync([FromRoute] int id, CancellationToken cancellationToken)
@@ -43,7 +49,7 @@ namespace SurvayBacket.Api.Controllers
             //var NewPoll =await _pollService.CreateAsync(poll, cancellationToken);
             var NewPoll =await _pollService.CreateAsync(pollrequest, cancellationToken);
             return NewPoll.IsSuccess? Ok(NewPoll.Value)
-                : NewPoll.ToProblem(StatusCodes.Status409Conflict);  
+                : NewPoll.ToProblem();  
 
         }
 
@@ -53,7 +59,7 @@ namespace SurvayBacket.Api.Controllers
             var result =await _pollService.UpdateAsync(id, pollrequest , cancellationToken);
            
             if (result.IsFailure)
-                return result.ToProblem(StatusCodes.Status409Conflict);
+                return result.ToProblem();
 
             return NoContent();
         }
