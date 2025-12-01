@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SurvayBacket.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbf32d19fa7053fd7b1c52a35ff2082d00eb0a3e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15751d22c4425b28a2e377adde99d831c6759659")]
 [assembly: System.Reflection.AssemblyProductAttribute("SurvayBacket.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SurvayBacket.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
