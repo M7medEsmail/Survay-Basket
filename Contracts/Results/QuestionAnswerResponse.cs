@@ -1,6 +1,9 @@
 ﻿namespace SurvayBacket.Api.Contracts.Results
 {
-    public class QuestionAnswerResponse
-    {
-    }
+    public record QuestionAnswerResponse
+   (
+        string Question,
+        string Answer
+
+      );
 }

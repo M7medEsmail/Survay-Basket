@@ -2,7 +2,8 @@
     using MapsterMapper;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
-    using SurvayBacket.Api;
+using Serilog;
+using SurvayBacket.Api;
     using SurvayBacket.Api.Middlewares;
     using SurvayBacket.Api.Persistence;
     using SurvayBacket.Api.Services;
@@ -51,6 +52,11 @@
 //    .addentityframeworkStores<ApplicationDbContext>();
 
 
+builder.Host.UseSerilog((context, configration) =>
+{
+    configration.ReadFrom.Configuration(context.Configuration);
+});
+
 var app = builder.Build();
 
     // Configure the HTTP request pipeline.
@@ -63,6 +69,8 @@ var app = builder.Build();
 
     //app.UseMiddleware<CustomMiddleware>();
 
+    app.UseSerilogRequestLogging();
+
     app.UseCustomMiddleware();
 
     app.UseHttpsRedirection();
@@ -72,7 +80,9 @@ var app = builder.Build();
     app.UseAuthorization();
 
     app.MapControllers();
-    app.UseExceptionHandler();
-//app.UseMiddleware<ExceptionHandelMiddleware>();
 
-app.Run();
+    app.UseExceptionHandler();
+
+    //app.UseMiddleware<ExceptionHandelMiddleware>();
+
+    app.Run();

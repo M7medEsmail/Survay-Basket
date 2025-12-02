@@ -12,5 +12,6 @@ namespace SurvayBacket.Api.Entities
         public Poll Poll { get; set; } = default!;
 
         public ICollection<Answer> Answers { get; set; } = [];
+        public ICollection<VoteAnswer> VoteAnswers { get; set; } = [];
     }
 }

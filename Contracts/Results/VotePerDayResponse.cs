@@ -1,6 +1,8 @@
 ﻿namespace SurvayBacket.Api.Contracts.Results
 {
-    public class VotePerDayResponse
-    {
-    }
+    public record VotePerDayResponse
+    (
+        DateOnly Date,
+        int NumberOfVotes
+     );
 }

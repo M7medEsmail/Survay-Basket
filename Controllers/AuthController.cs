@@ -11,14 +11,15 @@ namespace SurvayBacket.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController(IAuthService authService) : ControllerBase
+    public class AuthController(IAuthService authService ,ILogger<AuthController> logger) : ControllerBase
     {
         private readonly IAuthService _authService = authService;
+        private readonly ILogger<AuthController> _logger = logger;
 
         [HttpPost("login")]
         public async Task <IActionResult> Login(LoginRequest loginRequest ,CancellationToken cancellationToken)
         {
-
+            _logger.LogInformation("Login Attempt for {Email}", loginRequest.Email);
             var AuthRequest =  await _authService.GenerateJwtToken(loginRequest.Email, loginRequest.Password, cancellationToken);
 
             return AuthRequest.IsSuccess? Ok(AuthRequest) :AuthRequest.ToProblem();

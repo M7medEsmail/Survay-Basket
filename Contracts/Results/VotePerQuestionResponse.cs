@@ -1,6 +1,9 @@
 ﻿namespace SurvayBacket.Api.Contracts.Results
 {
-    public class VotePerQuestionResponse
-    {
-    }
+    public record VotePerQuestionResponse
+     (
+        string Question,
+        IEnumerable<VotePerAnswerResponse> SelectedAnswers
+        );
+    
 }
