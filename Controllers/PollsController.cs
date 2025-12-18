@@ -30,7 +30,7 @@ namespace SurvayBacket.Api.Controllers
         [HttpGet("{id:int}")]
         public async Task <IActionResult> GetByIdAsync([FromRoute] int id, CancellationToken cancellationToken)
         {
-            var poll =await _pollService.GetByIdAsync(id, cancellationToken);
+            Result<PollResponse>? poll =await _pollService.GetByIdAsync(id, cancellationToken);
             return poll.IsFailure? NotFound(poll.Error) : Ok(poll.Value);
         }
 
@@ -56,7 +56,7 @@ namespace SurvayBacket.Api.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] PollRequest pollrequest ,CancellationToken cancellationToken)
         {
-            var result =await _pollService.UpdateAsync(id, pollrequest , cancellationToken);
+            Result? result =await _pollService.UpdateAsync(id, pollrequest , cancellationToken);
            
             if (result.IsFailure)
                 return result.ToProblem();

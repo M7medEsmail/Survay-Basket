@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OutputCaching;
 using SurvayBacket.Api.Abstractions;
 using SurvayBacket.Api.Contracts.Votes;
 using SurvayBacket.Api.Entities;
@@ -18,6 +19,7 @@ namespace SurvayBacket.Api.Controllers
         private readonly IVoteService _voteService = voteService;
 
         [HttpGet]
+        [OutputCache(PolicyName = "OutPutCache")]
         public async Task<IActionResult> Start([FromRoute] int pollId, CancellationToken cancellationToken)
         {
             var userId = User.GetUserId();

@@ -57,6 +57,18 @@ builder.Host.UseSerilog((context, configration) =>
     configration.ReadFrom.Configuration(context.Configuration);
 });
 
+///OutPut cache
+builder.Services.AddOutputCache(options =>
+{
+    options.AddPolicy("Polls", policy =>
+    {
+        policy.Cache().Expire(TimeSpan.FromSeconds(120)).Tag("OutPutCache");
+     
+    });
+});
+
+
+
 var app = builder.Build();
 
     // Configure the HTTP request pipeline.
@@ -81,6 +93,8 @@ var app = builder.Build();
 
     app.MapControllers();
 
+    app.UseOutputCache();
+        
     app.UseExceptionHandler();
 
     //app.UseMiddleware<ExceptionHandelMiddleware>();

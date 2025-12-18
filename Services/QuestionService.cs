@@ -1,13 +1,15 @@
-﻿using SurvayBacket.Api.Abstractions;
+﻿using Microsoft.AspNetCore.OutputCaching;
+using SurvayBacket.Api.Abstractions;
 using SurvayBacket.Api.Contracts.Answer;
 using SurvayBacket.Api.Contracts.Question;
 using SurvayBacket.Api.Errors;
 
 namespace SurvayBacket.Api.Services
 {
-    public class QuestionService(ApplicationDbContext context) : IQuestionService
+    public class QuestionService(ApplicationDbContext context , IOutputCacheStore outputCacheStore) : IQuestionService
     {
         private readonly ApplicationDbContext _context = context;
+        private readonly IOutputCacheStore _outputCacheStore = outputCacheStore;
 
         public async Task<Result<QuestionResponse>> AddAsync(int pollId, QuestionRequest Request, CancellationToken cancellationToken)
         {
@@ -26,6 +28,9 @@ namespace SurvayBacket.Api.Services
 
             await _context.Questions.AddAsync(question, cancellationToken);
             await _context.SaveChangesAsync(cancellationToken);
+            await _outputCacheStore.EvictByTagAsync("OutPutCache", cancellationToken); // use to make cache consistancy
+
+
             return Result.Success(question.Adapt<QuestionResponse>());
 
         }
@@ -71,6 +76,8 @@ namespace SurvayBacket.Api.Services
                 return Result.Failure<QuestionResponse>(QuestionError.QuestionNotFound);
             question.IsActive = !question.IsActive;
             await _context.SaveChangesAsync(cancellationToken);
+            await _outputCacheStore.EvictByTagAsync("OutPutCache", cancellationToken);// use to make cache consistancy
+
             return Result.Success();
 
         }
@@ -105,6 +112,8 @@ namespace SurvayBacket.Api.Services
             });
 
             await _context.SaveChangesAsync(cancellationToken);
+            await _outputCacheStore.EvictByTagAsync("OutPutCache", cancellationToken); // use to make cache consistancy
+
             return Result.Success();
         }
         public async Task<Result<IEnumerable<QuestionResponse>>> GetAvailable(int pollId, string userId, CancellationToken cancellationToken)

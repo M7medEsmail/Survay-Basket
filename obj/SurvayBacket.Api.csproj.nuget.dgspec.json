@@ -59,6 +59,10 @@
               "target": "Package",
               "version": "[12.1.0, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.14.1, )"
+            },
             "Mapster": {
               "target": "Package",
               "version": "[7.4.0, )"

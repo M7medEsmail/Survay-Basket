@@ -1,16 +1,30 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.WebUtilities;
 using SurvayBacket.Api.Abstractions;
 using SurvayBacket.Api.Authentication;
 using SurvayBacket.Api.Contracts.Authentication;
 using SurvayBacket.Api.Errors;
+using SurvayBacket.Api.Helper;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace SurvayBacket.Api.Services
 {
-    public class AuthService(UserManager<ApplicationUser > userManager , IJwtProvider jwtProvider) : IAuthService
+    public class AuthService(UserManager<ApplicationUser > userManager,
+        SignInManager<ApplicationUser> signInManager ,
+        IJwtProvider jwtProvider,
+        ILogger<AuthService> logger ,
+        IEmailSender emailSender , 
+        IHttpContextAccessor httpContextAccessor) : IAuthService 
+
     {
         private readonly UserManager<ApplicationUser> _userManager = userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager = signInManager;
         private readonly IJwtProvider _jwtProvider = jwtProvider;
+        private readonly ILogger<AuthService> _logger = logger;
+        private readonly IEmailSender _emailSender = emailSender;
+        private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
         public static readonly int RefreshTokenExpireDay = 60;
         public async Task<Result<AuthResponse>> GenerateJwtToken(string email, string password, CancellationToken cancellationToken)
         {
@@ -19,24 +33,30 @@ namespace SurvayBacket.Api.Services
             if (user is null)
                 return Result.Failure<AuthResponse>(UserError.InvalidCredentials);
 
-            var isPasswordValid = await _userManager.CheckPasswordAsync(user, password);
-            if (!isPasswordValid)
-                return Result.Failure<AuthResponse>(UserError.InvalidCredentials);
+            //var isPasswordValid = await _userManager.CheckPasswordAsync(user, password);
+            //if (!isPasswordValid)
+            //    return Result.Failure<AuthResponse>(UserError.InvalidCredentials);
+                
+            var result = await _signInManager.PasswordSignInAsync(user, password, false, false);
+            if(result.Succeeded)
+            {
 
-            var (token, expiration) = _jwtProvider.GenerateJwtToken(user);
+                var (token, expiration) = _jwtProvider.GenerateJwtToken(user);
 
-            var refreshToken = GenerateRefreshToken();
-            var refreshTokenExpiryTime = DateTime.UtcNow.AddDays(RefreshTokenExpireDay);
+                var refreshToken = GenerateRefreshToken();
+                var refreshTokenExpiryTime = DateTime.UtcNow.AddDays(RefreshTokenExpireDay);
 
-            user.RefreshTokens.Add(new RefreshToken{
-                Token = refreshToken,
-                ExpireOn = refreshTokenExpiryTime,
+                user.RefreshTokens.Add(new RefreshToken
+                {
+                    Token = refreshToken,
+                    ExpireOn = refreshTokenExpiryTime,
+                });
 
-            });
-
-            await _userManager.UpdateAsync(user);
-            var resonse = new AuthResponse(user.Id, user.FirstName, user.LastName, user.Email!, token, expiration, refreshToken, refreshTokenExpiryTime);
-            return Result.Success(resonse);
+                await _userManager.UpdateAsync(user);
+                var resonse = new AuthResponse(user.Id, user.FirstName, user.LastName, user.Email!, token, expiration, refreshToken, refreshTokenExpiryTime);
+                return Result.Success(resonse);
+            }
+            return Result.Failure<AuthResponse>(result.IsNotAllowed ? UserError.EmailNotConfirmed : UserError.InvalidCredentials);
 
         }
         public async Task<Result<AuthResponse>> GetRefreshToken(string token, string refreshToken, CancellationToken cancellationToken)
@@ -74,17 +94,94 @@ namespace SurvayBacket.Api.Services
         {
             return Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
         }
+
+
+
         public async Task<Result> RegisterAsync(RegisterRequest registerRequest, CancellationToken cancellationToken)
         {
-            var user = new ApplicationUser
+            var emailIsExist = await _userManager.Users.AnyAsync(u => u.Email == registerRequest.Email, cancellationToken);
+            if (emailIsExist)
+                return Result.Failure(UserError.DublicateEmail);
+
+            var user =registerRequest.Adapt<ApplicationUser>();
+            var result = await _userManager.CreateAsync(user, registerRequest.Password);
+
+            if (result.Succeeded)
             {
-                UserName = registerRequest.Email,
-                Email = registerRequest.Email,
-                FirstName = registerRequest.FirstName,
-                LastName = registerRequest.LastName
-            };
-            await _userManager.CreateAsync(user, registerRequest.Password);
+                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                _logger.LogInformation($"Confirmation Code is : {code}");
+                await SendInformationEmail(user, code);
+
+                return Result.Success();
+            }
+
+            var errors = result.Errors.First();
+            return Result.Failure(new Error(errors.Code, errors.Description, StatusCodes.Status400BadRequest));
+            
+
+
+        }
+
+        public async Task<Result> ResendConfirmationEmail(ResendInformationEmailRequest resendInformationEmail)
+        {
+            var user = await _userManager.FindByEmailAsync(resendInformationEmail.Email);
+            if (user is null)
+                return Result.Failure(UserError.UserIsNull);
+
+            if (user.EmailConfirmed)
+                return Result.Failure(UserError.DulicatedConfirmarion);
+
+            var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+            _logger.LogInformation($"Confirmation Code is : {code}");
+            await SendInformationEmail(user, code);
             return Result.Success();
+        }
+
+        private async Task SendInformationEmail(ApplicationUser user , string code)
+        {
+            var origin = _httpContextAccessor.HttpContext?.Request.Headers["origin"];
+            var emailBody = EmailBodyBuilder.GenerateEmailBody("EmailConfirmation",
+                new Dictionary<string, string>
+                {
+                    {"{{UserName}}" , user.FirstName },
+                    {"{{ConfirmUrl}}" , $"{origin}/api/auth/confirm-email?userId={user.Id}&code={code}" }
+                });
+
+            await _emailSender.SendEmailAsync(user.Email!, "Survay Basket: Confirm your email", emailBody);
+        } 
+
+        public async Task<Result> ConfirmEmail(ConfirmEmailRequest confirmEmailRequest)
+        {
+            var user = await _userManager.FindByIdAsync(confirmEmailRequest.UserId);
+            if (user is null)
+                return Result.Failure(UserError.UserIsNull);
+
+            var EmailConfirmed = await _userManager.IsEmailConfirmedAsync(user);
+            if (EmailConfirmed)
+                return Result.Failure(UserError.DulicatedConfirmarion);
+
+            var code = confirmEmailRequest.Code;
+
+            try 
+            {
+                code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code));
+               
+            }
+            catch(FormatException)
+            {
+                return Result.Failure(UserError.InvalidCode);
+            }
+            
+            var result = await _userManager.ConfirmEmailAsync(user, code);
+            if (result.Succeeded)
+            {
+                return Result.Success();
+            }
+            var errors = result.Errors.First();
+            return Result.Failure(new Error(errors.Code, errors.Description, StatusCodes.Status400BadRequest));
+
         }
     }
 }

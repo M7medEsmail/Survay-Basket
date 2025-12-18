@@ -195,3 +195,6 @@ C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\S
 C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\System.Text.Encodings.Web.dll
 C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Text.Encodings.Web.dll
+C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\MailKit.dll
+C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\MimeKit.dll

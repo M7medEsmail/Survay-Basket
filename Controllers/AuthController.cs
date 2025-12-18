@@ -28,18 +28,23 @@ namespace SurvayBacket.Api.Controllers
 
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterRequest registerRequest, CancellationToken cancellationToken)
-        {
-            var user = new ApplicationUser
-            {
-                UserName = registerRequest.Email,
-                Email = registerRequest.Email,
-                FirstName = registerRequest.FirstName,
-                LastName = registerRequest.LastName
-
-            };
+        {       
             var result = await _authService.RegisterAsync(registerRequest, cancellationToken);
-            return Ok(registerRequest);
+            return result.IsSuccess ? Ok() : result.ToProblem();
         }
 
+        [HttpPost("confirm-email")]
+        public async Task<IActionResult> ConfirmEmail([FromBody]ConfirmEmailRequest confirmEmailRequest)
+        {
+            var result = await _authService.ConfirmEmail(confirmEmailRequest);
+            return result.IsSuccess ? Ok() : result.ToProblem();
+        }
+
+        [HttpPost("resend-confirmation-email")]
+        public async Task<IActionResult> ResendConfirmationEmail([FromBody] ResendInformationEmailRequest resendInformationEmailRequest)
+        {
+            var result = await _authService.ResendConfirmationEmail(resendInformationEmailRequest);
+            return result.IsSuccess ? Ok() : result.ToProblem();
+        }
     }
 }

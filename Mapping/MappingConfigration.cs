@@ -1,4 +1,5 @@
-﻿using SurvayBacket.Api.Contracts.Polls;
+﻿using SurvayBacket.Api.Contracts.Authentication;
+using SurvayBacket.Api.Contracts.Polls;
 using SurvayBacket.Api.Contracts.Question;
 
 namespace SurvayBacket.Api.Mapping
@@ -21,6 +22,8 @@ namespace SurvayBacket.Api.Mapping
                 .Map(dest => dest.Title, src => src.Title)
                 .Map(dest => dest.IsPublished, src => src.IsPublished);
 
+            config.NewConfig<RegisterRequest, ApplicationUser>()
+                .Map(dest => dest.UserName, src => src.FirstName + src.LastName);
 
         }
     }

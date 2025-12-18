@@ -1,6 +1,7 @@
 ﻿using MapsterMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,6 +9,7 @@ using Microsoft.IdentityModel.Tokens;
 using SurvayBacket.Api.Authentication;
 using SurvayBacket.Api.Errors;
 using SurvayBacket.Api.Persistence;
+using SurvayBacket.Api.Settings;
 using System.Reflection;
 
 namespace SurvayBacket.Api
@@ -53,14 +55,25 @@ namespace SurvayBacket.Api
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IQuestionService, QuestionService>();
             services.AddScoped<IResultService, ResultService>();
+            services.AddScoped<IVoteService, VoteService>();
+            services.AddScoped<IEmailSender, MailService>();
 
+            services.Configure<MailSettings>(configuration.GetSection("MailSettings"));
+
+            services.AddHttpContextAccessor();
             services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
 
             //services.Configure<JwtOption>(configuration.GetSection("Jwt")); // used to map value in Appsettings.json file to JwtOption class
             services.AddOptions<JwtOption>().BindConfiguration(JwtOption.SectionName).ValidateDataAnnotations().ValidateOnStart();
 
-
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.SignIn.RequireConfirmedEmail = true;
+                options.User.RequireUniqueEmail = true;
+                options.Password.RequiredLength = 8;
+            });
             services.AddAuthentication(option => {
                 option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -78,9 +91,6 @@ namespace SurvayBacket.Api
                     ClockSkew = TimeSpan.Zero
                 };
             });
-
-
-
 
             return services;
         }
