@@ -1,0 +1,11 @@
+﻿global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Mvc;
+global using SurvayBacket.Api.Entities;
+global using Mapster;
+global using SurvayBacket.Api.Mapping;
+global using SurvayBacket.Api.Services;
+global using Microsoft.EntityFrameworkCore;
+global using SurvayBacket.Api.Persistence;
+global using FluentValidation;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using SurvayBacket.Api.Persistence.EntitesConfigration;

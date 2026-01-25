@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "xf1Cmzf7UsaVmySf8Yu0JKR7uL8FEfrF0/ubQiH4aaU=",
+  "Source": "SurvayBacket.Api",
+  "BasePath": "_content/SurvayBacket.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
