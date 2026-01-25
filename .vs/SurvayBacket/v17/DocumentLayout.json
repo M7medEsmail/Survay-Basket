@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\services\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\services\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\survaybacket.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\survaybacket.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -11,20 +19,12 @@
       "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\templates\\pollnotification.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\templates\\pollnotification.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\templates\\emailconfirmation.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\templates\\emailconfirmation.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\services\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\services\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\depndancyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -168,7 +168,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 29,
+          "SelectedChildIndex": 24,
           "Children": [
             {
               "$type": "Bookmark",
@@ -264,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PollNotification.html",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Templates\\PollNotification.html",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Templates\\PollNotification.html",
@@ -276,27 +276,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "NotificationService.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\NotificationService.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Services\\NotificationService.cs",
               "ToolTip": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\NotificationService.cs",
               "RelativeToolTip": "SurvayBacket.Api\\Services\\NotificationService.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAIAwwDcAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAA1wDQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T14:17:38.321Z"
+              "WhenOpened": "2026-01-22T14:17:38.321Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "INotificationService.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\INotificationService.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Services\\INotificationService.cs",
               "ToolTip": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\INotificationService.cs",
               "RelativeToolTip": "SurvayBacket.Api\\Services\\INotificationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T14:17:37.539Z"
+              "WhenOpened": "2026-01-22T14:17:37.539Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -336,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "SurvayBacket.Api.csproj",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\SurvayBacket.Api.csproj",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\SurvayBacket.Api.csproj",
@@ -349,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "EmailConfirmation.html",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Templates\\EmailConfirmation.html",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Templates\\EmailConfirmation.html",
@@ -361,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Program.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Program.cs",
@@ -369,8 +371,7 @@
               "RelativeToolTip": "SurvayBacket.Api\\Program.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAswFcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T12:53:11.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T12:53:11.445Z"
             },
             {
               "$type": "Document",
