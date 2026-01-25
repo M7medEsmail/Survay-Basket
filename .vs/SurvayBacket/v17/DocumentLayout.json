@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\survaybacket.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\survaybacket.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -40,10 +44,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MohamedEA\\AppData\\Roaming\\Microsoft\\UserSecrets\\aec8fb05-573d-4ad0-82d6-cf5de18c8250\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\survaybacket.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\survaybacket.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\services\\mailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -168,7 +168,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 31,
+          "SelectedChildIndex": 29,
           "Children": [
             {
               "$type": "Bookmark",
@@ -264,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PollNotification.html",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Templates\\PollNotification.html",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Templates\\PollNotification.html",
@@ -272,12 +272,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Templates\\PollNotification.html",
               "ViewState": "AgIAACkAAAAAAAAAAAAswEgAAABvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-01-22T14:26:53.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-22T14:26:53.847Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "NotificationService.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\NotificationService.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Services\\NotificationService.cs",
@@ -285,12 +284,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Services\\NotificationService.cs",
               "ViewState": "AgIAABoAAAAAAAAAAIAwwDcAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T14:17:38.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-22T14:17:38.321Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "INotificationService.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\INotificationService.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Services\\INotificationService.cs",
@@ -298,12 +296,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Services\\INotificationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T14:17:37.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-22T14:17:37.539Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Controllers\\AuthController.cs",
@@ -311,8 +308,7 @@
               "RelativeToolTip": "SurvayBacket.Api\\Controllers\\AuthController.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAgwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T13:56:42.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T13:56:42.401Z"
             },
             {
               "$type": "Document",
@@ -328,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "DepndancyInjection.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\DepndancyInjection.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\DepndancyInjection.cs",
@@ -336,12 +332,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\DepndancyInjection.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAgwDYAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T12:54:03.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T12:54:03.492Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "SurvayBacket.Api.csproj",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\SurvayBacket.Api.csproj",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\SurvayBacket.Api.csproj",
@@ -349,11 +344,12 @@
               "RelativeToolTip": "SurvayBacket.Api\\SurvayBacket.Api.csproj",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-02T12:52:12.859Z"
+              "WhenOpened": "2025-12-02T12:52:12.859Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "EmailConfirmation.html",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Templates\\EmailConfirmation.html",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Templates\\EmailConfirmation.html",
@@ -361,18 +357,17 @@
               "RelativeToolTip": "SurvayBacket.Api\\Templates\\EmailConfirmation.html",
               "ViewState": "AgIAACYAAAAAAAAAAAAswGcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-12-17T14:45:14.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T14:45:14.9Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Program.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Program.cs",
               "ToolTip": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Program.cs",
               "RelativeToolTip": "SurvayBacket.Api\\Program.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAHEAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAswFcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T12:53:11.445Z",
               "EditorCaption": ""
@@ -391,7 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Services\\AuthService.cs",
@@ -403,7 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\appsettings.json",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\appsettings.json",
@@ -415,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "secrets.json",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\AppData\\Roaming\\Microsoft\\UserSecrets\\aec8fb05-573d-4ad0-82d6-cf5de18c8250\\secrets.json",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\aec8fb05-573d-4ad0-82d6-cf5de18c8250\\secrets.json",

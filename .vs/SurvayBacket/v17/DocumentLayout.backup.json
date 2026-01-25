@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\templates\\pollnotification.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\templates\\pollnotification.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\templates\\emailconfirmation.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\templates\\emailconfirmation.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\services\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\services\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\depndancyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\depndancyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,24 +42,12 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MohamedEA\\AppData\\Roaming\\Microsoft\\UserSecrets\\aec8fb05-573d-4ad0-82d6-cf5de18c8250\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\survaybacket.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\survaybacket.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\depndancyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\depndancyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\services\\mailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\services\\mailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\templates\\emailconfirmation.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|solutionrelative:survaybacket.api\\templates\\emailconfirmation.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36BEFD97-BE40-406B-89A2-680AECB937E2}|SurvayBacket.Api\\SurvayBacket.Api.csproj|c:\\users\\mohamedea\\source\\repos\\survaybacket\\survaybacket.api\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -156,7 +168,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 24,
+          "SelectedChildIndex": 31,
           "Children": [
             {
               "$type": "Bookmark",
@@ -252,46 +264,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "SurvayBacket.Api\\Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\AuthService.cs",
-              "RelativeToolTip": "SurvayBacket.Api\\Services\\AuthService.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAawHwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T09:50:23.442Z",
+              "DocumentIndex": 2,
+              "Title": "PollNotification.html",
+              "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Templates\\PollNotification.html",
+              "RelativeDocumentMoniker": "SurvayBacket.Api\\Templates\\PollNotification.html",
+              "ToolTip": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Templates\\PollNotification.html",
+              "RelativeToolTip": "SurvayBacket.Api\\Templates\\PollNotification.html",
+              "ViewState": "AgIAACkAAAAAAAAAAAAswEgAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-01-22T14:26:53.847Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "SurvayBacket.Api\\Services\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\NotificationService.cs",
+              "RelativeToolTip": "SurvayBacket.Api\\Services\\NotificationService.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAIAwwDcAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T14:17:38.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\INotificationService.cs",
+              "RelativeDocumentMoniker": "SurvayBacket.Api\\Services\\INotificationService.cs",
+              "ToolTip": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\INotificationService.cs",
+              "RelativeToolTip": "SurvayBacket.Api\\Services\\INotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T14:17:37.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Controllers\\AuthController.cs",
               "RelativeToolTip": "SurvayBacket.Api\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAEwCAAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T13:56:42.401Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "EmailBodyBuilder.cs",
-              "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Helper\\EmailBodyBuilder.cs",
-              "RelativeDocumentMoniker": "SurvayBacket.Api\\Helper\\EmailBodyBuilder.cs",
-              "ToolTip": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Helper\\EmailBodyBuilder.cs",
-              "RelativeToolTip": "SurvayBacket.Api\\Helper\\EmailBodyBuilder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T09:35:22.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "GlobalUsing.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\GlobalUsing.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\GlobalUsing.cs",
@@ -299,25 +324,24 @@
               "RelativeToolTip": "SurvayBacket.Api\\GlobalUsing.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T09:51:17.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-18T09:51:17.68Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "DepndancyInjection.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\DepndancyInjection.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\DepndancyInjection.cs",
               "ToolTip": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\DepndancyInjection.cs",
               "RelativeToolTip": "SurvayBacket.Api\\DepndancyInjection.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAgwF8AAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAgwDYAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T12:54:03.492Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "SurvayBacket.Api.csproj",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\SurvayBacket.Api.csproj",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\SurvayBacket.Api.csproj",
@@ -325,12 +349,61 @@
               "RelativeToolTip": "SurvayBacket.Api\\SurvayBacket.Api.csproj",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-02T12:52:12.859Z",
+              "WhenOpened": "2025-12-02T12:52:12.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmailConfirmation.html",
+              "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Templates\\EmailConfirmation.html",
+              "RelativeDocumentMoniker": "SurvayBacket.Api\\Templates\\EmailConfirmation.html",
+              "ToolTip": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Templates\\EmailConfirmation.html",
+              "RelativeToolTip": "SurvayBacket.Api\\Templates\\EmailConfirmation.html",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswGcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-12-17T14:45:14.9Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Program.cs",
+              "RelativeDocumentMoniker": "SurvayBacket.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Program.cs",
+              "RelativeToolTip": "SurvayBacket.Api\\Program.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAHEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T12:53:11.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EmailBodyBuilder.cs",
+              "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Helper\\EmailBodyBuilder.cs",
+              "RelativeDocumentMoniker": "SurvayBacket.Api\\Helper\\EmailBodyBuilder.cs",
+              "ToolTip": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Helper\\EmailBodyBuilder.cs",
+              "RelativeToolTip": "SurvayBacket.Api\\Helper\\EmailBodyBuilder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T09:35:22.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "SurvayBacket.Api\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\AuthService.cs",
+              "RelativeToolTip": "SurvayBacket.Api\\Services\\AuthService.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAawHwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T09:50:23.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\appsettings.json",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\appsettings.json",
@@ -338,25 +411,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\appsettings.json",
               "ViewState": "AgIAABgAAAAAAAAAAAAAACoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-02T12:53:43.128Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T12:53:43.128Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Program.cs",
-              "RelativeDocumentMoniker": "SurvayBacket.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Program.cs",
-              "RelativeToolTip": "SurvayBacket.Api\\Program.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAAEkAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T12:53:11.445Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "secrets.json",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\AppData\\Roaming\\Microsoft\\UserSecrets\\aec8fb05-573d-4ad0-82d6-cf5de18c8250\\secrets.json",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\aec8fb05-573d-4ad0-82d6-cf5de18c8250\\secrets.json",
@@ -364,25 +423,11 @@
               "RelativeToolTip": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\aec8fb05-573d-4ad0-82d6-cf5de18c8250\\secrets.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-17T14:50:26.033Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T14:50:26.033Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EmailConfirmation.html",
-              "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Templates\\EmailConfirmation.html",
-              "RelativeDocumentMoniker": "SurvayBacket.Api\\Templates\\EmailConfirmation.html",
-              "ToolTip": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Templates\\EmailConfirmation.html",
-              "RelativeToolTip": "SurvayBacket.Api\\Templates\\EmailConfirmation.html",
-              "ViewState": "AgIAADAAAAAAAAAAAIBJwEkAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-12-17T14:45:14.9Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "MailSettings.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Settings\\MailSettings.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Settings\\MailSettings.cs",
@@ -390,12 +435,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Settings\\MailSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T14:51:17.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T14:51:17.917Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "MailService.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\MailService.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Services\\MailService.cs",
@@ -403,12 +447,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Services\\MailService.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAABQwB0AAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T08:40:55.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-18T08:40:55.627Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\IAuthService.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Services\\IAuthService.cs",
@@ -416,12 +459,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Services\\IAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T09:30:02.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T09:30:02.512Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "ResendInformationEmailRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Contracts\\Authentication\\ResendInformationEmailRequestValidator.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Contracts\\Authentication\\ResendInformationEmailRequestValidator.cs",
@@ -429,12 +471,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Contracts\\Authentication\\ResendInformationEmailRequestValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T14:31:27.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T14:31:27.539Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "ResendInformationEmailRequest.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Contracts\\Authentication\\ResendInformationEmailRequest.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Contracts\\Authentication\\ResendInformationEmailRequest.cs",
@@ -442,12 +483,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Contracts\\Authentication\\ResendInformationEmailRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T14:31:25.387Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T14:31:25.387Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "LoginRequestValidation.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Contracts\\Authentication\\LoginRequestValidation.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Contracts\\Authentication\\LoginRequestValidation.cs",
@@ -455,12 +495,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Contracts\\Authentication\\LoginRequestValidation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T09:44:44.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T09:44:44.485Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Contracts\\Authentication\\LoginRequest.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Contracts\\Authentication\\LoginRequest.cs",
@@ -468,12 +507,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Contracts\\Authentication\\LoginRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T09:44:45.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T09:44:45.413Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "RegisterRequestValidation.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Contracts\\Authentication\\RegisterRequestValidation.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Contracts\\Authentication\\RegisterRequestValidation.cs",
@@ -481,12 +519,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Contracts\\Authentication\\RegisterRequestValidation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T09:44:36.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T09:44:36.363Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "MappingConfigration.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Mapping\\MappingConfigration.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Mapping\\MappingConfigration.cs",
@@ -494,12 +531,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Mapping\\MappingConfigration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T09:57:18.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T09:57:18.525Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "Result.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Abstractions\\Result.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Abstractions\\Result.cs",
@@ -507,12 +543,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Abstractions\\Result.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAUwBUAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T09:39:35.569Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T09:39:35.569Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "RegisterRequest.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Contracts\\Authentication\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Contracts\\Authentication\\RegisterRequest.cs",
@@ -520,12 +555,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Contracts\\Authentication\\RegisterRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T09:44:41.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T09:44:41.399Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "UserError.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Errors\\UserError.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Errors\\UserError.cs",
@@ -533,12 +567,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Errors\\UserError.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T08:52:40.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T08:52:40.224Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "ConfirmEmailRequest.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Contracts\\Authentication\\ConfirmEmailRequest.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Contracts\\Authentication\\ConfirmEmailRequest.cs",
@@ -546,12 +579,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Contracts\\Authentication\\ConfirmEmailRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T09:11:33.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T09:11:33.911Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "ConfirmEmailRequestValidator.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Contracts\\Authentication\\ConfirmEmailRequestValidator.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Contracts\\Authentication\\ConfirmEmailRequestValidator.cs",
@@ -559,23 +591,21 @@
               "RelativeToolTip": "SurvayBacket.Api\\Contracts\\Authentication\\ConfirmEmailRequestValidator.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T09:11:35.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T09:11:35.35Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "web.config",
               "DocumentMoniker": "\\\\DEV-JOSEPHT\\aichatdev\\web.config",
               "ToolTip": "\\\\DEV-JOSEPHT\\aichatdev\\web.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-12-14T13:38:28.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T13:38:28.512Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "GlobalExceptionHandler.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Errors\\GlobalExceptionHandler.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Errors\\GlobalExceptionHandler.cs",
@@ -583,12 +613,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Errors\\GlobalExceptionHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T09:36:01.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-09T09:36:01.98Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "AuthResponse.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Contracts\\Authentication\\AuthResponse.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Contracts\\Authentication\\AuthResponse.cs",
@@ -596,12 +625,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Contracts\\Authentication\\AuthResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T09:44:46.288Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T09:44:46.288Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "CustomMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Middlewares\\CustomMiddleware.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Middlewares\\CustomMiddleware.cs",
@@ -609,12 +637,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Middlewares\\CustomMiddleware.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAmwBIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T12:53:47.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T12:53:47.653Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "QuestionService.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Services\\QuestionService.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Services\\QuestionService.cs",
@@ -622,12 +649,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Services\\QuestionService.cs",
               "ViewState": "AgIAAFkAAAAAAAAAAAAYwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T09:34:24.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-09T09:34:24.784Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "VotesController.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Controllers\\VotesController.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Controllers\\VotesController.cs",
@@ -635,12 +661,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Controllers\\VotesController.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAQwB4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T09:33:23.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-09T09:33:23.37Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "QuestionController.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Controllers\\QuestionController.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Controllers\\QuestionController.cs",
@@ -648,12 +673,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Controllers\\QuestionController.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAgwDEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T09:53:45.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T09:53:45.763Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "PollError.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Errors\\PollError.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Errors\\PollError.cs",
@@ -661,12 +685,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Errors\\PollError.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T12:15:28.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T12:15:28.42Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "PollsController.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Controllers\\PollsController.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Controllers\\PollsController.cs",
@@ -674,12 +697,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Controllers\\PollsController.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAiwEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T12:15:32.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T12:15:32.909Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "MyMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Middlewares\\MyMiddleware.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Middlewares\\MyMiddleware.cs",
@@ -687,12 +709,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Middlewares\\MyMiddleware.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T12:53:39.693Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T12:53:39.693Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "ResultController.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Controllers\\ResultController.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Controllers\\ResultController.cs",
@@ -700,12 +721,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Controllers\\ResultController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T12:20:38.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T12:20:38.82Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "CustomMiddlewareExtension.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Middlewares\\CustomMiddlewareExtension.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Middlewares\\CustomMiddlewareExtension.cs",
@@ -713,12 +733,11 @@
               "RelativeToolTip": "SurvayBacket.Api\\Middlewares\\CustomMiddlewareExtension.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T12:53:38.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T12:53:38.034Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "ExceptionHandelMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\MohamedEA\\source\\repos\\SurvayBacket\\SurvayBacket.Api\\Middlewares\\ExceptionHandelMiddleware.cs",
               "RelativeDocumentMoniker": "SurvayBacket.Api\\Middlewares\\ExceptionHandelMiddleware.cs",
@@ -726,8 +745,7 @@
               "RelativeToolTip": "SurvayBacket.Api\\Middlewares\\ExceptionHandelMiddleware.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T12:53:33.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T12:53:33.643Z"
             }
           ]
         }
