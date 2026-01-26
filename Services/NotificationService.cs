@@ -53,7 +53,7 @@ namespace SurvayBacket.Api.Services
 
 
                     var body = EmailBodyBuilder.GenerateEmailBody("NewPollNotification", placeHolder);
-                    await _emailSender.SendEmailAsync(user.Email, "New Poll Published", body);
+                    await _emailSender.SendEmailAsync(user.Email, "New Poll Published!", body);
 
                    }
 
