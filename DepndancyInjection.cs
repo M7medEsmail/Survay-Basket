@@ -1,4 +1,5 @@
-﻿using MapsterMapper;
+﻿using Hangfire;
+using MapsterMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -54,6 +55,7 @@ namespace SurvayBacket.Api
             services.AddSingleton<IJwtProvider, JwtProvider>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IQuestionService, QuestionService>();
+            services.AddScoped<INotificationService, NotificationService>();
             services.AddScoped<IResultService, ResultService>();
             services.AddScoped<IVoteService, VoteService>();
             services.AddScoped<IEmailSender, MailService>();
@@ -92,6 +94,7 @@ namespace SurvayBacket.Api
                 };
             });
 
+            services.AddBackgroundJobsConfig(configuration);
             return services;
         }
         public static IServiceCollection AddDbContextByInject(this IServiceCollection services , IConfiguration configuration)
@@ -101,6 +104,20 @@ namespace SurvayBacket.Api
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
 
+            return services;
+        }
+
+        public static IServiceCollection AddBackgroundJobsConfig(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddHangfire(config =>
+            {
+                config.SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
+                .UseSimpleAssemblyNameTypeSerializer()
+                .UseRecommendedSerializerSettings()
+                .UseSqlServerStorage(configuration.GetConnectionString("HangfireConnection"));
+            });
+
+            services.AddHangfireServer();
             return services;
         }
     }

@@ -1,4 +1,6 @@
-    using Mapster;
+using Hangfire;
+using HangfireBasicAuthenticationFilter;
+using Mapster;
     using MapsterMapper;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
@@ -86,6 +88,28 @@ var app = builder.Build();
     app.UseCustomMiddleware();
 
     app.UseHttpsRedirection();
+    
+    app.UseHangfireDashboard("/jobs" , new DashboardOptions
+    {
+        Authorization =
+        [
+            new HangfireCustomBasicAuthenticationFilter{
+                User = builder.Configuration.GetValue<string>("HangfireSettings:Username"),
+                Pass = builder.Configuration.GetValue<string>("HangfireSettings:Password")
+            }
+        ],
+        DashboardTitle = "SurvayBacket BackgroundJobs Dashboard",
+        //IsReadOnlyFunc = (httpContext) => true                     make it read only not be able to trigger jobs in dashboard
+    });
+
+/// configure recurring job to send notification about new polls daily
+    var scopeFactory = app.Services.GetRequiredService<IServiceScopeFactory>();
+    using var scope = scopeFactory.CreateScope();
+    var notificationService = scope.ServiceProvider.GetRequiredService<INotificationService>();
+    RecurringJob.AddOrUpdate(
+        "SendNewPollNotificationJob",
+        () => notificationService.SendNewPollNotification(null),
+        Cron.Daily);
 
     app.UseCors("MyPolicy");
 

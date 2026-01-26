@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Hangfire;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.WebUtilities;
 using SurvayBacket.Api.Abstractions;
@@ -149,7 +150,8 @@ namespace SurvayBacket.Api.Services
                     {"{{ConfirmUrl}}" , $"{origin}/api/auth/confirm-email?userId={user.Id}&code={code}" }
                 });
 
-            await _emailSender.SendEmailAsync(user.Email!, "Survay Basket: Confirm your email", emailBody);
+            BackgroundJob.Enqueue(() => _emailSender.SendEmailAsync(user.Email!, "Survay Basket: Confirm your email", emailBody));
+            await Task.CompletedTask;
         } 
 
         public async Task<Result> ConfirmEmail(ConfirmEmailRequest confirmEmailRequest)
