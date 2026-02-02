@@ -10,8 +10,8 @@ namespace SurvayBacket.Api.Services
         Task<Result> RegisterAsync(RegisterRequest registerRequest, CancellationToken cancellationToken);
         Task<Result> ConfirmEmail(ConfirmEmailRequest confirmEmailRequest);
         Task<Result> ResendConfirmationEmail(ResendInformationEmailRequest resendInformationEmail);
-
-
+        Task<Result> SendResetPasswordCode(ForgetPasswordRequest forgetPasswordRequest);
+        Task<Result> ResetPasswordAsync(ResetPasswordRequest resetPasswordRequest);
 
 
     }

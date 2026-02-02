@@ -59,6 +59,7 @@ namespace SurvayBacket.Api
             services.AddScoped<IResultService, ResultService>();
             services.AddScoped<IVoteService, VoteService>();
             services.AddScoped<IEmailSender, MailService>();
+            services.AddScoped<IUserService, UserService>();
 
             services.Configure<MailSettings>(configuration.GetSection("MailSettings"));
 

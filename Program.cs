@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using Hangfire;
 using HangfireBasicAuthenticationFilter;
 using Mapster;
@@ -69,6 +70,10 @@ builder.Services.AddOutputCache(options =>
     });
 });
 
+
+// Adding Fluent Validation Configuration
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
 
 var app = builder.Build();

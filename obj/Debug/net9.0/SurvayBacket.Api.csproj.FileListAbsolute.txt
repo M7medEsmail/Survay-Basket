@@ -218,3 +218,5 @@ C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\t
 C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\zh-TW\Hangfire.Core.resources.dll
 C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\zh\Hangfire.Core.resources.dll
 C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\HangfireBasicAuthenticationFilter.dll
+C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\TemplateEngineHost\vs\templatecache.json
+C:\Users\MohamedEA\source\repos\SurvayBacket\SurvayBacket.Api\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
