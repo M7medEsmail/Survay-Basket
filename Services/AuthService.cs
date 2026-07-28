@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Hangfire;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.WebUtilities;
 using SurvayBacket.Api.Abstractions;
@@ -95,8 +96,6 @@ namespace SurvayBacket.Api.Services
             return Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
         }
 
-
-
         public async Task<Result> RegisterAsync(RegisterRequest registerRequest, CancellationToken cancellationToken)
         {
             var emailIsExist = await _userManager.Users.AnyAsync(u => u.Email == registerRequest.Email, cancellationToken);
@@ -119,10 +118,45 @@ namespace SurvayBacket.Api.Services
             var errors = result.Errors.First();
             return Result.Failure(new Error(errors.Code, errors.Description, StatusCodes.Status400BadRequest));
             
-
-
         }
 
+        public async Task<Result> SendResetPasswordCode(ForgetPasswordRequest forgetPasswordRequest)
+        {
+            var user = await _userManager.FindByEmailAsync(forgetPasswordRequest.Email);
+            if (user is null)
+                return Result.Success(); //we do not want to reveal that the user does not exist
+            var code = await _userManager.GeneratePasswordResetTokenAsync(user);
+          
+            code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+            _logger.LogInformation($"Reset Password Code is : {code}");
+           await SendResetPasswordEmail(user, code);
+            return Result.Success();
+        }
+     
+        public async Task<Result> ResetPasswordAsync(ResetPasswordRequest resetPasswordRequest)
+        {
+            var user = await _userManager.FindByEmailAsync(resetPasswordRequest.Email);
+            if (user is null || !user.EmailConfirmed)
+                return Result.Failure(UserError.InvalidCode);
+
+            IdentityResult result;
+            try
+            {
+                var code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(resetPasswordRequest.Code));
+                result = await _userManager.ResetPasswordAsync(user, code, resetPasswordRequest.NewPassword);
+            }
+            catch (FormatException)
+            {
+                result = IdentityResult.Failed(_userManager.ErrorDescriber.InvalidToken());
+            }
+
+            if(result.Succeeded)
+                return Result.Success();
+            var errors = result.Errors.First();
+            return Result.Failure(new Error(errors.Code, errors.Description, StatusCodes.Status401Unauthorized));
+
+        }
+        
         public async Task<Result> ResendConfirmationEmail(ResendInformationEmailRequest resendInformationEmail)
         {
             var user = await _userManager.FindByEmailAsync(resendInformationEmail.Email);
@@ -138,7 +172,6 @@ namespace SurvayBacket.Api.Services
             await SendInformationEmail(user, code);
             return Result.Success();
         }
-
         private async Task SendInformationEmail(ApplicationUser user , string code)
         {
             var origin = _httpContextAccessor.HttpContext?.Request.Headers["origin"];
@@ -149,9 +182,23 @@ namespace SurvayBacket.Api.Services
                     {"{{ConfirmUrl}}" , $"{origin}/api/auth/confirm-email?userId={user.Id}&code={code}" }
                 });
 
-            await _emailSender.SendEmailAsync(user.Email!, "Survay Basket: Confirm your email", emailBody);
-        } 
+            BackgroundJob.Enqueue(() => _emailSender.SendEmailAsync(user.Email!, "Survay Basket: Confirm your email", emailBody));
+            await Task.CompletedTask;
+        }
+        private async Task SendResetPasswordEmail(ApplicationUser user, string code)
+        {
+            var origin = _httpContextAccessor.HttpContext?.Request.Headers["origin"];
+            var emailBody = EmailBodyBuilder.GenerateEmailBody("ForgetPassword",
+                new Dictionary<string, string>
+                {
+                    {"{{UserName}}" , user.FirstName },
+                    {"{{AppName}}" , "Survay Basket" },
+                    {"{{ResetUrl}}" , $"{origin}/api/auth/forget-password?email={user.Email}&code={code}" }
+                });
 
+            BackgroundJob.Enqueue(() => _emailSender.SendEmailAsync(user.Email!, "Survay Basket: Change Password ", emailBody));
+            await Task.CompletedTask;
+        }
         public async Task<Result> ConfirmEmail(ConfirmEmailRequest confirmEmailRequest)
         {
             var user = await _userManager.FindByIdAsync(confirmEmailRequest.UserId);

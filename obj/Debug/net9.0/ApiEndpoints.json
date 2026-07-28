@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "SurvayBacket.Api.Controllers.AuthController",
+    "Method": "ForgetPassword",
+    "RelativePath": "api/Auth/forget-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "forgetPasswordRequest",
+        "Type": "SurvayBacket.Api.Contracts.Authentication.ForgetPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurvayBacket.Api.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
     "HttpMethod": "POST",
@@ -58,6 +74,22 @@
       {
         "Name": "resendInformationEmailRequest",
         "Type": "SurvayBacket.Api.Contracts.Authentication.ResendInformationEmailRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurvayBacket.Api.Controllers.AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Auth/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resetPasswordRequest",
+        "Type": "SurvayBacket.Api.Contracts.Authentication.ResetPasswordRequest",
         "IsRequired": true
       }
     ],
@@ -340,6 +372,48 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurvayBacket.Api.Controllers.AccountController",
+    "Method": "info",
+    "RelativePath": "me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurvayBacket.Api.Controllers.AccountController",
+    "Method": "ChangePassword",
+    "RelativePath": "me/change-password",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SurvayBacket.Api.Contracts.ChangePasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurvayBacket.Api.Controllers.AccountController",
+    "Method": "UpdateInfo",
+    "RelativePath": "me/info",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SurvayBacket.Api.Contracts.Users.UpdateProfileRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

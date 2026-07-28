@@ -46,5 +46,20 @@ namespace SurvayBacket.Api.Controllers
             var result = await _authService.ResendConfirmationEmail(resendInformationEmailRequest);
             return result.IsSuccess ? Ok() : result.ToProblem();
         }
+
+        [HttpPost("forget-password")]
+        public async Task<IActionResult> ForgetPassword([FromBody] ForgetPasswordRequest forgetPasswordRequest)
+        {
+            var result = await _authService.SendResetPasswordCode(forgetPasswordRequest);
+            return result.IsSuccess ? Ok() : result.ToProblem();
+        }
+
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody] Contracts.Authentication.ResetPasswordRequest resetPasswordRequest)
+        {
+            var result = await _authService.ResetPasswordAsync(resetPasswordRequest);
+            return result.IsSuccess ? Ok() : result.ToProblem();
+        }
+
     }
 }
